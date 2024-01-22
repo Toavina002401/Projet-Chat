@@ -37,6 +37,7 @@ public class Accueil extends javax.swing.JFrame {
         appel = new javax.swing.JLabel();
         appelVideo = new javax.swing.JLabel();
         deconnexion = new javax.swing.JLabel();
+        boiteDisc = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Page d'accueil");
@@ -49,7 +50,7 @@ public class Accueil extends javax.swing.JFrame {
         Discussions.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Discussions.setText("Discussions");
 
-        iconDisc.setIcon(new javax.swing.ImageIcon("C:\\Users\\Belouh\\Downloads\\icons8-message-chat-100.png")); // NOI18N
+        iconDisc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-message-chat-100.png"))); // NOI18N
         iconDisc.setText("iconDisc");
 
         discInstantanner.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -58,7 +59,7 @@ public class Accueil extends javax.swing.JFrame {
         nbdisc.setText("XXX");
         nbdisc.setName(""); // NOI18N
 
-        iconUtilisateur.setIcon(new javax.swing.ImageIcon("C:\\Users\\Belouh\\Downloads\\icons8-utilisateur-75.png")); // NOI18N
+        iconUtilisateur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-utilisateur-75.png"))); // NOI18N
 
         nomUtilisateur.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         nomUtilisateur.setText("Utilisateur 1");
@@ -71,7 +72,7 @@ public class Accueil extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(Discussions, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -115,11 +116,22 @@ public class Accueil extends javax.swing.JFrame {
 
         discInstantanner.getAccessibleContext().setAccessibleName("nbDisc");
 
-        appel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Belouh\\Downloads\\icons8-appel-25.png")); // NOI18N
+        appel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-appel-25.png"))); // NOI18N
 
-        appelVideo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Belouh\\Downloads\\icons8-appel-video-25.png")); // NOI18N
+        appelVideo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-appel-video-25.png"))); // NOI18N
 
-        deconnexion.setIcon(new javax.swing.ImageIcon("C:\\Users\\Belouh\\Downloads\\icons8-connexion-25.png")); // NOI18N
+        deconnexion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-connexion-25.png"))); // NOI18N
+
+        javax.swing.GroupLayout boiteDiscLayout = new javax.swing.GroupLayout(boiteDisc);
+        boiteDisc.setLayout(boiteDiscLayout);
+        boiteDiscLayout.setHorizontalGroup(
+            boiteDiscLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 675, Short.MAX_VALUE)
+        );
+        boiteDiscLayout.setVerticalGroup(
+            boiteDiscLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,13 +139,16 @@ public class Accueil extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(569, 569, 569)
-                .addComponent(appel)
-                .addGap(28, 28, 28)
-                .addComponent(appelVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(deconnexion)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(appel)
+                        .addGap(28, 28, 28)
+                        .addComponent(appelVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(deconnexion))
+                    .addComponent(boiteDisc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +163,9 @@ public class Accueil extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(appel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boiteDisc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleName("accueil");
@@ -195,6 +212,7 @@ public class Accueil extends javax.swing.JFrame {
     private javax.swing.JLabel Discussions;
     private javax.swing.JLabel appel;
     private javax.swing.JLabel appelVideo;
+    private javax.swing.JPanel boiteDisc;
     private javax.swing.JLabel deconnexion;
     private javax.swing.JLabel discInstantanner;
     private javax.swing.JLabel iconDisc;
